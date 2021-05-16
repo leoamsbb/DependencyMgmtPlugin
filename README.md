@@ -1,13 +1,26 @@
-1. [Dependency Management Plugin for sbt](#dependency-management-plugin-for-sbt)
-2. [How to use](#how-to-use)
-3. [Why I needed this?](#why-i-needed-this)
-4. [Advantages?](#advantages)
-5. [Disadvantages?](#disadvantages)
-
 # Dependency Management Plugin for sbt
 A Plugin to manage dependencies in case your project has lot of modules and it becomes difficult to track and manage the
 dependencies.
 In case of Maven, we have parent pom which can be used for dependency management. <dependencyManagement> attribute.
+
+1. [Dependency Management Plugin for sbt](#dependency-management-plugin-for-sbt)
+2. [Test Locally](#test-locally)   
+3. [Publish Locally](#publish-locally)
+4. [How to use](#how-to-use)
+5. [Why I needed this?](#why-i-needed-this)
+6. [Advantages?](#advantages)
+7. [Disadvantages?](#disadvantages)
+
+## Test Locally
+- Open sbt-shell
+- execute command: `scripted`
+- It should start executing all the test projects inside `sbt-test` directory.
+- In this case, there are three tests: 1. failure 2. multiple and 3. simple.
+- While `multiple` and `simple` should succeed compilation, `failure` fails.
+- Reference documentation from sbt: https://www.scala-sbt.org/1.x/docs/Testing-sbt-plugins.html
+
+## Publish Locally
+To publish any plugin on local use command : `publishLocal` from sbt-shell OR `sbt publishLocal` from Terminal.
 
 ## How to use
 - This is just a structure depicting how you can have the dependency management system in an sbt plugin.
